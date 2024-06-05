@@ -1,0 +1,35 @@
+Code Sample:
+
+<?php
+//Enter your login username 
+$username="9030888111";
+
+//Enter your login password 
+$password="password";
+
+//Enter your text message 
+$message="hello";
+
+//Enter your Sender ID
+$sender="";
+
+//Enter your receiver mobile number
+$mobile_number="+989035143135";
+
+//Don't change below code use as it is
+$url="https://www.bulksmsgateway.in/sendmessage.php?user=".urlencode($username)."&password=".urlencode($password)."&
+mobile=".urlencode($mobile_number)."&message=".urlencode($message)."&sender=".urlencode($sender)."&type=".urlencode('3');
+
+$ch = curl_init($url);
+
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+$curl_scraped_page = curl_exec($ch);
+
+curl_close($ch);
+
+?>
+
+Please note that some of the above code has been supplied to Bulk SMS Gateway 
+
+by clients. As such, accuracy is not guaranteed by Bulk SMS Gateway.
